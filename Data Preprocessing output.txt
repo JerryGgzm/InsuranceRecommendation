@@ -1,0 +1,642 @@
+Analyzing DataFrame: c_condition
+
+Data Types:
+ENCOUNTER_ID        object
+PATIENT_ID           int64
+CONDITION_DATE      object
+CONDITION_TYPE      object
+CODE_TYPE           object
+CODE                object
+DESCRIPTION         object
+DIAGNOSIS_RANK       int64
+PRESENT_ON_ADMIT    object
+DATA_SOURCE         object
+dtype: object
+
+Unique values count for each column:
+ENCOUNTER_ID: 75617 unique values
+PATIENT_ID: 962 unique values
+CONDITION_DATE: 1097 unique values
+CONDITION_TYPE: 1 unique values
+Unique values in CONDITION_TYPE: ['discharge diagnosis']
+CODE_TYPE: 1 unique values
+Unique values in CODE_TYPE: ['icd-10-cm']
+CODE: 5652 unique values
+DESCRIPTION: 5636 unique values
+DIAGNOSIS_RANK: 25 unique values
+PRESENT_ON_ADMIT: 4 unique values
+Unique values in PRESENT_ON_ADMIT: [nan '0' 'Y' 'N']
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: c_coverage
+
+Data Types:
+PATIENT_ID              int64
+COVERAGE_START_DATE    object
+COVERAGE_END_DATE      object
+PAYER                  object
+PAYER_TYPE             object
+DATA_SOURCE            object
+dtype: object
+
+Unique values count for each column:
+PATIENT_ID: 1000 unique values
+COVERAGE_START_DATE: 2 unique values
+Unique values in COVERAGE_START_DATE: ['2016-01-01' '2017-01-01']
+COVERAGE_END_DATE: 15 unique values
+PAYER: 1 unique values
+Unique values in PAYER: ['medicare']
+PAYER_TYPE: 1 unique values
+Unique values in PAYER_TYPE: ['medicare']
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: c_encounter
+
+Data Types:
+ENCOUNTER_ID                          object
+PATIENT_ID                             int64
+ENCOUNTER_TYPE                        object
+ENCOUNTER_START_DATE                  object
+ENCOUNTER_END_DATE                    object
+ADMIT_SOURCE_CODE                     object
+ADMIT_SOURCE_DESCRIPTION              object
+ADMIT_TYPE_CODE                      float64
+ADMIT_TYPE_DESCRIPTION                object
+DISCHARGE_DISPOSITION_CODE           float64
+DISCHARGE_DISPOSITION_DESCRIPTION     object
+PHYSICIAN_NPI                        float64
+LOCATION                             float64
+FACILITY_NPI                         float64
+MS_DRG                               float64
+PAID_AMOUNT                          float64
+CHARGE_AMOUNT                        float64
+DATA_SOURCE                           object
+dtype: object
+
+Unique values count for each column:
+ENCOUNTER_ID: 77521 unique values
+PATIENT_ID: 962 unique values
+ENCOUNTER_TYPE: 18 unique values
+ENCOUNTER_START_DATE: 1097 unique values
+ENCOUNTER_END_DATE: 1093 unique values
+ADMIT_SOURCE_CODE: 10 unique values
+ADMIT_SOURCE_DESCRIPTION: 7 unique values
+Unique values in ADMIT_SOURCE_DESCRIPTION: [nan 'Non-Health Care Facility Point of Origin (Physician Referral)'
+ 'Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer'
+ 'Clinic Referral' 'Transfer from Skilled Nursing Facility (SNF)'
+ 'Transfer from Hospital (different facility)'
+ 'Transfer from Another Health Care Facility']
+ADMIT_TYPE_CODE: 5 unique values
+Unique values in ADMIT_TYPE_CODE: [nan  1.  3.  2.  5.]
+ADMIT_TYPE_DESCRIPTION: 5 unique values
+Unique values in ADMIT_TYPE_DESCRIPTION: [nan 'Emergency' 'Elective' 'Urgent' 'Trauma Center']
+DISCHARGE_DISPOSITION_CODE: 20 unique values
+DISCHARGE_DISPOSITION_DESCRIPTION: 20 unique values
+PHYSICIAN_NPI: 42297 unique values
+LOCATION: 1 unique values
+Unique values in LOCATION: [nan]
+FACILITY_NPI: 1770 unique values
+MS_DRG: 133 unique values
+PAID_AMOUNT: 23194 unique values
+CHARGE_AMOUNT: 26855 unique values
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: c_med_claim
+
+Data Types:
+CLAIM_ID                              object
+CLAIM_LINE_NUMBER                      int64
+CLAIM_TYPE                            object
+ENCOUNTER_ID                          object
+PATIENT_ID                             int64
+CLAIM_START_DATE                      object
+CLAIM_END_DATE                        object
+CLAIM_LINE_START_DATE                 object
+CLAIM_LINE_END_DATE                   object
+BILL_TYPE_CODE                        object
+BILL_TYPE_DESCRIPTION                float64
+PLACE_OF_SERVICE_CODE                float64
+PLACE_OF_SERVICE_DESCRIPTION          object
+REVENUE_CENTER_CODE                  float64
+REVENUE_CENTER_DESCRIPTION            object
+SERVICE_UNIT_QUANTITY                float64
+PAID_DATE                            float64
+PAID_AMOUNT                          float64
+HCPCS_CODE                            object
+HCPCS_MODIFIER_1                      object
+HCPCS_MODIFIER_2                      object
+HCPCS_MODIFIER_3                      object
+HCPCS_MODIFIER_4                      object
+HCPCS_MODIFIER_5                     float64
+RENDERING_NPI                        float64
+BILLING_NPI                          float64
+FACILITY_NPI                         float64
+DISCHARGE_DISPOSITION_CODE           float64
+DISCHARGE_DISPOSITION_DESCRIPTION     object
+CHARGE_AMOUNT                        float64
+DATA_SOURCE                           object
+dtype: object
+
+Unique values count for each column:
+CLAIM_ID: 86115 unique values
+CLAIM_LINE_NUMBER: 82 unique values
+CLAIM_TYPE: 2 unique values
+Unique values in CLAIM_TYPE: ['I' 'P']
+ENCOUNTER_ID: 77521 unique values
+PATIENT_ID: 962 unique values
+CLAIM_START_DATE: 1097 unique values
+CLAIM_END_DATE: 1093 unique values
+CLAIM_LINE_START_DATE: 1094 unique values
+CLAIM_LINE_END_DATE: 1094 unique values
+BILL_TYPE_CODE: 53 unique values
+BILL_TYPE_DESCRIPTION: 1 unique values
+Unique values in BILL_TYPE_DESCRIPTION: [nan]
+PLACE_OF_SERVICE_CODE: 32 unique values
+PLACE_OF_SERVICE_DESCRIPTION: 32 unique values
+REVENUE_CENTER_CODE: 169 unique values
+REVENUE_CENTER_DESCRIPTION: 145 unique values
+SERVICE_UNIT_QUANTITY: 226 unique values
+PAID_DATE: 1 unique values
+Unique values in PAID_DATE: [nan]
+PAID_AMOUNT: 19046 unique values
+HCPCS_CODE: 2770 unique values
+HCPCS_MODIFIER_1: 160 unique values
+HCPCS_MODIFIER_2: 90 unique values
+HCPCS_MODIFIER_3: 11 unique values
+HCPCS_MODIFIER_4: 3 unique values
+Unique values in HCPCS_MODIFIER_4: [nan 'GY' 'PO']
+HCPCS_MODIFIER_5: 1 unique values
+Unique values in HCPCS_MODIFIER_5: [nan]
+RENDERING_NPI: 47179 unique values
+BILLING_NPI: 698 unique values
+FACILITY_NPI: 1770 unique values
+DISCHARGE_DISPOSITION_CODE: 20 unique values
+DISCHARGE_DISPOSITION_DESCRIPTION: 20 unique values
+CHARGE_AMOUNT: 22799 unique values
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: c_member_month
+
+Data Types:
+PATIENT_ID           int64
+PAYER               object
+MONTH                int64
+YEAR                 int64
+DUAL_STATUS        float64
+MEDICARE_STATUS    float64
+DATA_SOURCE         object
+dtype: object
+
+Unique values count for each column:
+PATIENT_ID: 1000 unique values
+PAYER: 1 unique values
+Unique values in PAYER: ['medicare']
+MONTH: 12 unique values
+YEAR: 3 unique values
+Unique values in YEAR: [2016 2017 2018]
+DUAL_STATUS: 9 unique values
+Unique values in DUAL_STATUS: [nan  8.  1.  0.  2.  3.  6.  4. 99.]
+MEDICARE_STATUS: 6 unique values
+Unique values in MEDICARE_STATUS: [10. 20.  0. 31. 21. nan]
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: c_patient
+
+Data Types:
+PATIENT_ID         int64
+GENDER            object
+BIRTH_DATE        object
+RACE              object
+ZIP_CODE         float64
+STATE             object
+COUNTY            object
+DECEASED_FLAG      int64
+DEATH_DATE        object
+DATA_SOURCE       object
+dtype: object
+
+Unique values count for each column:
+PATIENT_ID: 1000 unique values
+GENDER: 2 unique values
+Unique values in GENDER: ['female' 'male']
+BIRTH_DATE: 956 unique values
+RACE: 7 unique values
+Unique values in RACE: ['white' 'black' 'hispanic' 'asian' 'unknown' 'other'
+ 'north american native']
+ZIP_CODE: 1 unique values
+Unique values in ZIP_CODE: [nan]
+STATE: 52 unique values
+COUNTY: 461 unique values
+DECEASED_FLAG: 2 unique values
+Unique values in DECEASED_FLAG: [0 1]
+DEATH_DATE: 39 unique values
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: c_procedure
+
+Data Types:
+ENCOUNTER_ID      object
+PATIENT_ID         int64
+PROCEDURE_DATE    object
+CODE_TYPE         object
+CODE              object
+DESCRIPTION       object
+PHYSICIAN_NPI      int64
+DATA_SOURCE       object
+dtype: object
+
+Unique values count for each column:
+ENCOUNTER_ID: 120 unique values
+PATIENT_ID: 76 unique values
+PROCEDURE_DATE: 106 unique values
+CODE_TYPE: 1 unique values
+Unique values in CODE_TYPE: ['icd-10-pcs']
+CODE: 91 unique values
+DESCRIPTION: 91 unique values
+PHYSICIAN_NPI: 84 unique values
+DATA_SOURCE: 1 unique values
+Unique values in DATA_SOURCE: ['cclf']
+
+========================================
+
+Analyzing DataFrame: e_allergy
+
+Data Types:
+encounter_id             int64
+patient_id               int64
+status                  object
+allergy_description     object
+severity               float64
+data_source             object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 1072 unique values
+patient_id: 722 unique values
+status: 1 unique values
+Unique values in status: ['active']
+allergy_description: 230 unique values
+severity: 1 unique values
+Unique values in severity: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_condition
+
+Data Types:
+encounter_id          int64
+patient_id            int64
+condition_date       object
+condition_type       object
+code_type            object
+code                 object
+description          object
+diagnosis_rank        int64
+present_on_admit    float64
+data_source          object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 1437 unique values
+patient_id: 928 unique values
+condition_date: 368 unique values
+condition_type: 1 unique values
+Unique values in condition_type: ['discharge diagnosis']
+code_type: 1 unique values
+Unique values in code_type: ['icd-10-cm']
+code: 1329 unique values
+description: 1329 unique values
+diagnosis_rank: 27 unique values
+present_on_admit: 1 unique values
+Unique values in present_on_admit: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_encounter
+
+Data Types:
+encounter_id                           int64
+patient_id                             int64
+encounter_type                        object
+encounter_start_date                  object
+encounter_end_date                    object
+admit_source_code                    float64
+admit_source_description             float64
+admit_type_code                      float64
+admit_type_description               float64
+discharge_disposition_code           float64
+discharge_disposition_description     object
+physician_npi                         object
+location                              object
+facility_npi                         float64
+ms_drg                               float64
+paid_amount                          float64
+data_source                           object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 1538 unique values
+patient_id: 1000 unique values
+encounter_type: 4 unique values
+Unique values in encounter_type: ['emergency department' 'other' 'outpatient' 'acute inpatient']
+encounter_start_date: 369 unique values
+encounter_end_date: 373 unique values
+admit_source_code: 1 unique values
+Unique values in admit_source_code: [nan]
+admit_source_description: 1 unique values
+Unique values in admit_source_description: [nan]
+admit_type_code: 1 unique values
+Unique values in admit_type_code: [nan]
+admit_type_description: 1 unique values
+Unique values in admit_type_description: [nan]
+discharge_disposition_code: 13 unique values
+discharge_disposition_description: 13 unique values
+physician_npi: 793 unique values
+location: 256 unique values
+facility_npi: 1 unique values
+Unique values in facility_npi: [nan]
+ms_drg: 1 unique values
+Unique values in ms_drg: [nan]
+paid_amount: 1 unique values
+Unique values in paid_amount: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_lab
+
+Data Types:
+encounter_id           int64
+patient_id             int64
+order_id             float64
+order_date           float64
+result_date           object
+component_name        object
+loinc                 object
+loinc_description     object
+result                object
+units                 object
+reference_range       object
+specimen             float64
+data_source           object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 537 unique values
+patient_id: 416 unique values
+order_id: 1 unique values
+Unique values in order_id: [nan]
+order_date: 1 unique values
+Unique values in order_date: [nan]
+result_date: 321 unique values
+component_name: 1002 unique values
+loinc: 212 unique values
+loinc_description: 566 unique values
+result: 1913 unique values
+units: 183 unique values
+reference_range: 1204 unique values
+specimen: 1 unique values
+Unique values in specimen: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_location
+
+Data Types:
+facility_npi           float64
+facility_name           object
+facility_type           object
+hospital_type          float64
+parent_organization    float64
+data_source            float64
+dtype: object
+
+Unique values count for each column:
+facility_npi: 1 unique values
+Unique values in facility_npi: [nan]
+facility_name: 1415 unique values
+facility_type: 3 unique values
+Unique values in facility_type: ['ER' 'ICU' nan]
+hospital_type: 1 unique values
+Unique values in hospital_type: [nan]
+parent_organization: 1 unique values
+Unique values in parent_organization: [nan]
+data_source: 1 unique values
+Unique values in data_source: [nan]
+
+========================================
+
+Analyzing DataFrame: e_medication
+
+Data Types:
+encounter_id         int64
+patient_id           int64
+request_date        object
+filled_date         object
+paid_date          float64
+request_status      object
+medication_name     object
+ndc                float64
+rx_norm            float64
+dose                object
+dose_unit           object
+quantity           float64
+refills            float64
+duration           float64
+route               object
+physician_npi      float64
+note               float64
+paid_amount        float64
+data_source         object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 764 unique values
+patient_id: 560 unique values
+request_date: 329 unique values
+filled_date: 219 unique values
+paid_date: 1 unique values
+Unique values in paid_date: [nan]
+request_status: 1 unique values
+Unique values in request_status: ['active']
+medication_name: 3075 unique values
+ndc: 1488 unique values
+rx_norm: 1 unique values
+Unique values in rx_norm: [nan]
+dose: 7 unique values
+Unique values in dose: [nan 'ONE' 'PRN' '1' 'SCH' 'STA' 'NR']
+dose_unit: 30 unique values
+quantity: 1 unique values
+Unique values in quantity: [nan]
+refills: 1 unique values
+Unique values in refills: [nan]
+duration: 1 unique values
+Unique values in duration: [nan]
+route: 114 unique values
+physician_npi: 1 unique values
+Unique values in physician_npi: [nan]
+note: 1 unique values
+Unique values in note: [nan]
+paid_amount: 1 unique values
+Unique values in paid_amount: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_patient
+
+Data Types:
+patient_id       int64
+name            object
+gender          object
+race            object
+ethnicity      float64
+birth_date      object
+death_date      object
+death_flag     float64
+address         object
+city            object
+state           object
+zip_code       float64
+phone           object
+email           object
+ssn            float64
+data_source     object
+dtype: object
+
+Unique values count for each column:
+patient_id: 1000 unique values
+name: 1000 unique values
+gender: 2 unique values
+Unique values in gender: ['male' 'female']
+race: 7 unique values
+Unique values in race: ['White' 'Other Race' 'Native Hawaiian or Other Pacific Islander'
+ 'American Indian or Alaska Native' 'Black or African American' 'Unknown'
+ 'Asian']
+ethnicity: 1 unique values
+Unique values in ethnicity: [nan]
+birth_date: 987 unique values
+death_date: 10 unique values
+death_flag: 2 unique values
+Unique values in death_flag: [nan  1.]
+address: 418 unique values
+city: 336 unique values
+state: 30 unique values
+zip_code: 441 unique values
+phone: 955 unique values
+email: 1000 unique values
+ssn: 1 unique values
+Unique values in ssn: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_practitioner
+
+Data Types:
+physician_npi     object
+name              object
+specialty        float64
+sub_specialty    float64
+data_source       object
+dtype: object
+
+Unique values count for each column:
+physician_npi: 15203 unique values
+name: 15127 unique values
+specialty: 1 unique values
+Unique values in specialty: [nan]
+sub_specialty: 1 unique values
+Unique values in sub_specialty: [nan]
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_procedure
+
+Data Types:
+encounter_id       int64
+patient_id         int64
+procedure_date    object
+code_type         object
+code              object
+description       object
+physician_npi     object
+data_source       object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 119 unique values
+patient_id: 111 unique values
+procedure_date: 115 unique values
+code_type: 1 unique values
+Unique values in code_type: ['icd-10-cm']
+code: 113 unique values
+description: 113 unique values
+physician_npi: 103 unique values
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
+Analyzing DataFrame: e_vital_sign
+
+Data Types:
+encounter_id           int64
+patient_id             int64
+component_id         float64
+loinc                 object
+loinc_description     object
+vital_date            object
+value                float64
+units                 object
+data_source           object
+dtype: object
+
+Unique values count for each column:
+encounter_id: 618 unique values
+patient_id: 471 unique values
+component_id: 1 unique values
+Unique values in component_id: [nan]
+loinc: 6 unique values
+Unique values in loinc: ['2708-6' '8310-5' '8867-4' '9279-1' '8462-4' '8480-6']
+loinc_description: 6 unique values
+Unique values in loinc_description: ['Oxygen saturation in Arterial blood' 'Body temperature' 'Heart Rate'
+ 'Respiratory rate' 'Diastolic blood pressure' 'Systolic blood pressure']
+vital_date: 334 unique values
+value: 219 unique values
+units: 6 unique values
+Unique values in units: ['%O2' 'degF' 'beats/min' '/min' 'degC' 'mmHg']
+data_source: 1 unique values
+Unique values in data_source: ['Syn']
+
+========================================
+
